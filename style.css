@@ -249,3 +249,21 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .wtxt{max-width:720px;margin:0 auto 36px;text-align:center;color:var(--mu)}
 .wtxt .btn{margin-top:14px}
 @media(max-width:800px){.poster-sec{grid-template-columns:1fr}.poster-sec h2{text-align:center}}
+
+.card .ic,.scene .ic{width:52px;height:52px;border-radius:15px;background:rgba(124,92,255,.14);border:1px solid rgba(124,92,255,.25);display:grid;place-items:center;margin-bottom:12px;font-size:0}
+.dlicon{width:84px;height:84px;margin:0 auto 12px;border-radius:24px;background:rgba(124,92,255,.14);border:1px solid rgba(124,92,255,.3);display:grid;place-items:center;box-shadow:0 0 30px rgba(124,92,255,.2)}
+.scenes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.scene{padding:24px;border-radius:20px;background:linear-gradient(160deg,#12122a,#0b0b17);border:1px solid var(--line);position:relative;overflow:hidden;transition:.3s}
+.scene::after{content:"";position:absolute;left:-40px;bottom:-60px;width:170px;height:170px;background:radial-gradient(circle,rgba(124,92,255,.28),transparent 70%)}
+.scene:hover{border-color:var(--p);transform:translateY(-4px)}
+.scene h3{font-size:16.5px;margin-bottom:6px;line-height:1.7}.scene p{color:var(--mu);font-size:14.5px;position:relative;z-index:1}
+.fchip{position:absolute;z-index:5;padding:8px 14px;border-radius:14px;background:rgba(20,20,44,.86);border:1px solid #3a3a70;backdrop-filter:blur(6px);font-size:12.5px;box-shadow:0 10px 30px rgba(0,0,0,.45);animation:float 5s ease-in-out infinite;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.fchip i{width:8px;height:8px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c)}
+.fchip.a{top:6%;left:0}.fchip.b{top:44%;right:-2%;animation-delay:.8s}.fchip.c{bottom:6%;left:4%;animation-delay:1.6s}
+h1 span,h2 span{background:linear-gradient(90deg,var(--p),var(--c),var(--pk),var(--p));background-size:300% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s linear infinite}
+@keyframes shine{to{background-position:300% center}}
+@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+@supports (animation-timeline:view()){.scene,.row2,.s3,.win,.stat{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 35%}}
+@media(max-width:800px){.fchip{display:none}}
+.dl .btn.big{font-size:17px;padding:14px 30px}
+.dl .card{display:flex;flex-direction:column;align-items:center}
