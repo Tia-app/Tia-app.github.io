@@ -171,3 +171,7 @@ html.js .rv.in{opacity:1;transform:none}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .chips span{padding:6px 16px;border:1px solid var(--line);border-radius:99px;color:var(--mu);font-size:.85rem;background:var(--card)}
 @media(prefers-reduced-motion:reduce){.sky::before,.sky i,.sky b{animation:none!important}.sky b{display:none}}
+.display{font-size:clamp(2rem,4.2vw,3.3rem)}
+.sec{padding:clamp(44px,7vw,84px) 0}
+.l-dl{display:none}
+@media(max-width:900px){.l-dl{display:block}}
