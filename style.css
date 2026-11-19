@@ -151,3 +151,23 @@ html.js .rv.in{opacity:1;transform:none}
 .vs .bc{grid-column:auto}
 @media(max-width:900px){.gl{grid-template-columns:1fr 1fr}.gb{grid-template-columns:1fr 1fr}.pz,.hw,.vs{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.mq-t{animation:none}}
+.sky{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;--st:#fff}
+:root[data-theme=light] .sky{--st:#5a43e5;opacity:.45}
+@media (prefers-color-scheme:light){:root:not([data-theme]) .sky{--st:#5a43e5;opacity:.45}}
+.sky::before{content:"";position:absolute;inset:-20%;background:radial-gradient(40% 35% at 18% 22%,rgba(139,123,255,.2),transparent 70%),radial-gradient(34% 30% at 82% 62%,rgba(79,140,255,.16),transparent 70%),radial-gradient(28% 26% at 55% 92%,rgba(34,211,238,.1),transparent 70%);animation:aur 36s ease-in-out infinite alternate}
+.sky i{position:absolute;inset:-8%;background-repeat:repeat;will-change:transform,opacity}
+.sky .s1{background-image:radial-gradient(1.2px 1.2px at 76px 299px,var(--st),transparent),radial-gradient(0.9px 0.9px at 40px 138px,var(--st),transparent),radial-gradient(1.2px 1.2px at 238px 249px,#bcd4ff,transparent),radial-gradient(1.1px 1.1px at 115px 56px,var(--st),transparent),radial-gradient(1.1px 1.1px at 207px 229px,var(--st),transparent),radial-gradient(1.1px 1.1px at 9px 364px,#bcd4ff,transparent),radial-gradient(1.3px 1.3px at 125px 310px,var(--st),transparent),radial-gradient(0.9px 0.9px at 170px 23px,var(--st),transparent),radial-gradient(0.9px 0.9px at 340px 285px,#bcd4ff,transparent),radial-gradient(1.0px 1.0px at 203px 359px,var(--st),transparent),radial-gradient(1.1px 1.1px at 224px 22px,var(--st),transparent),radial-gradient(1.1px 1.1px at 232px 261px,#bcd4ff,transparent),radial-gradient(1.2px 1.2px at 184px 126px,var(--st),transparent),radial-gradient(1.3px 1.3px at 243px 156px,var(--st),transparent);background-size:380px 380px;animation:tw 5s ease-in-out infinite alternate,dr1 120s linear infinite alternate}
+.sky .s2{background-image:radial-gradient(1.2px 1.2px at 65px 101px,#b9a8ff,transparent),radial-gradient(1.3px 1.3px at 181px 323px,#7fd8ff,transparent),radial-gradient(1.4px 1.4px at 225px 44px,var(--st),transparent),radial-gradient(1.5px 1.5px at 170px 449px,#b9a8ff,transparent),radial-gradient(1.4px 1.4px at 529px 388px,#7fd8ff,transparent),radial-gradient(1.3px 1.3px at 463px 522px,var(--st),transparent),radial-gradient(1.3px 1.3px at 44px 36px,#b9a8ff,transparent),radial-gradient(1.4px 1.4px at 334px 397px,#7fd8ff,transparent),radial-gradient(1.4px 1.4px at 546px 176px,var(--st),transparent),radial-gradient(1.1px 1.1px at 249px 244px,#b9a8ff,transparent);background-size:560px 560px;animation:tw 7s ease-in-out -2s infinite alternate,dr2 160s linear infinite alternate}
+.sky .s3{background-image:radial-gradient(2.0px 2.0px at 251px 614px,var(--st),transparent),radial-gradient(2.0px 2.0px at 386px 626px,#d4c8ff,transparent),radial-gradient(2.1px 2.1px at 602px 75px,#9fe9ff,transparent),radial-gradient(2.0px 2.0px at 488px 273px,var(--st),transparent),radial-gradient(2.0px 2.0px at 204px 742px,#d4c8ff,transparent),radial-gradient(1.9px 1.9px at 570px 495px,#9fe9ff,transparent);background-size:820px 820px;animation:tw 3.6s ease-in-out -1s infinite alternate,dr1 200s linear infinite alternate}
+.sky b{position:absolute;width:120px;height:1.5px;background:linear-gradient(90deg,transparent,#fff);opacity:0;border-radius:2px;transform:rotate(32deg);animation:sh 11s linear infinite}
+.sky .m1{top:10%;left:6%}.sky .m2{top:36%;left:52%;animation-delay:5.5s;animation-duration:15s}
+@keyframes tw{from{opacity:.3}to{opacity:1}}
+@keyframes dr1{to{transform:translate3d(-40px,30px,0)}}
+@keyframes dr2{to{transform:translate3d(30px,-45px,0)}}
+@keyframes aur{to{transform:translate3d(4%,3%,0) scale(1.08)}}
+@keyframes sh{0%{opacity:0;transform:translate3d(0,0,0) rotate(32deg)}2%{opacity:1}9%,100%{opacity:0;transform:translate3d(340px,212px,0) rotate(32deg)}}
+.sec.alt{background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--bg2) 60%,transparent) 20%,color-mix(in srgb,var(--bg2) 60%,transparent) 80%,transparent)}
+.mq{background:color-mix(in srgb,var(--bg2) 55%,transparent)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chips span{padding:6px 16px;border:1px solid var(--line);border-radius:99px;color:var(--mu);font-size:.85rem;background:var(--card)}
+@media(prefers-reduced-motion:reduce){.sky::before,.sky i,.sky b{animation:none!important}.sky b{display:none}}
