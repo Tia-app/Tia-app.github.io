@@ -175,3 +175,17 @@ html.js .rv.in{opacity:1;transform:none}
 .sec{padding:clamp(44px,7vw,84px) 0}
 .l-dl{display:none}
 @media(max-width:900px){.l-dl{display:block}}
+.dls{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.dls{grid-template-columns:1fr}}
+.sec,.ft{content-visibility:auto;contain-intrinsic-size:auto 700px}
+@media (max-width:900px),(pointer:coarse){
+.hd{-webkit-backdrop-filter:none;backdrop-filter:none;background:var(--bg)}
+.hero-art img,.shot img,.win img,.gl img{filter:none}
+.mq{-webkit-mask-image:none;mask-image:none}
+.hero::before{background:radial-gradient(70% 60% at 40% 20%,rgba(139,123,255,.2),transparent 70%)}
+.sky::before{animation:none}
+.sky i{inset:0;will-change:auto}
+.sky .s1{animation:tw 6s ease-in-out infinite alternate}
+.sky .s2{animation:tw 8s ease-in-out -2s infinite alternate}
+.sky .s3,.sky b{display:none}
+}
